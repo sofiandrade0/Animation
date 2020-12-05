@@ -16,7 +16,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 300
+let preferredWidth = 400
 let preferredHeight = 600
 /*:
  ## Required code
@@ -42,7 +42,7 @@ PlaygroundPage.current.liveView = canvas
 let turtle = Tortoise(drawingUpon: canvas)
 
 // Draw an "n"-side polygon
-func drawPolygon(withSides n: Int) {
+func drawPolygon(withSides n: Int, length: Int) {
     // Calculate the exterior angle
     
     let exteriorAngle : Degrees = 360.0 / Degrees(n)
@@ -50,12 +50,12 @@ func drawPolygon(withSides n: Int) {
     //Draw the sides of the polygon
     for _ in 1...n {
         
-        turtle.forward(steps: 50)
+        turtle.forward(steps: length)
         turtle.left(by: exteriorAngle)
     }
 }
 // Use the fuction - draw a pentagon
-drawPolygon(withSides : 3)
+drawPolygon(withSides : 3, length: 75)
 
 //move the turtle over  a bit
 turtle.penUp()
@@ -63,7 +63,76 @@ turtle.forward(steps: 100)
 turtle.penDown()
 
 // Use the function again - draw a square
-drawPolygon(withSides: 4)
+drawPolygon(withSides: 4, length: 75)
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 110)
+turtle.penDown()
+
+// Use the function again - draw a Pentagon
+drawPolygon(withSides: 5, length: 50)
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 110)
+turtle.penDown()
+
+// Use the function again - draw a Pentagon
+drawPolygon(withSides: 6, length: 50)
+
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 110)
+
+
+// Use the function again - draw a Pentagon
+turtle.setPosition(to: Point(x: 100, y: 250))
+turtle.penDown()
+drawPolygon(withSides: 40, length: 7)
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 100)
+
+// Use the function again - draw a Pentagon
+turtle.setPosition(to: Point(x: 50, y: 90))
+turtle.penDown()
+drawPolygon(withSides: 8, length: 40)
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 110)
+turtle.penDown()
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 100)
+
+// Use the function again - draw a Pentagon
+turtle.setPosition(to: Point(x: 170, y: 100))
+turtle.penDown()
+drawPolygon(withSides: 9, length: 30)
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 110)
+turtle.penDown()
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 100)
+
+// Use the function again - draw a Pentagon
+turtle.setPosition(to: Point(x: 300, y: 100))
+turtle.penDown()
+drawPolygon(withSides: 15, length: 20)
+
+//move the turtle over  a bit
+turtle.penUp()
+turtle.forward(steps: 110)
+turtle.penDown()
 /*:
  ## Show the Assistant Editor
  Don't see any results?
