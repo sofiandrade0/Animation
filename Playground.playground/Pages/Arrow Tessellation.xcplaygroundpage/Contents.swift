@@ -61,77 +61,62 @@ func drawPolygon(withSides n: Int, withLength l: Int) {
 }
 
 
-// Turn on high performance mode
-canvas.highPerformance = true
 
-// Set background
-let lightBlue = Color(hue: 200, saturation: 50, brightness: 50, alpha: 100)
-t.setPenColor(to: lightBlue)
-t.setFillColor(to: lightBlue)
-canvas.drawRectangle(at: Point(x: 0, y: 0),
-                     width: canvas.width,
-                     height: canvas.height)
-// Turtle sun
-t.setPenSize(to: 1)
-t.penUp()
-t.setPosition(to: Point(x: 400, y: 450))
-t.penUp()
-t.backward(steps: 100)
-t.penDown()
 
-// Sun
-t.setPenColor(to: .orange)
-t.setFillColor(to: .yellow)
-t.beginFill()
-for _ in 1...18 {
+func drawArrow() {
+    print("about to draw a arrow")
+    t.setFillColor(to: .red)
+    t.beginFill()
+    // Triangle Rectangle
+    t.penDown()
+    t.forward(steps: 60)
+    t.left(by: 90)
     t.forward(steps: 100)
-    t.left(by: 160)
+    t.left(by: -90)
+    t.forward(steps: 30)
+    t.left(by: 90)
+    t.right(by: -30)
+    t.forward(steps: 120)
+    
+    
+    t.left(by: 90)
+    t.right(by: -30)
+    t.forward(steps: 120)
+    t.left(by: 120)
+    t.forward(steps: 30)
+    t.right(by: 90)
+    t.forward(steps: 100)
+    t.left(by: 90)
+    t.endFill()
 }
 
-// Turn off high performance
+// Turn on high performance mo
 canvas.highPerformance = false
+
 t.penUp()
-t.forward(steps: 1)
+t.forward(steps: 30)
 t.penDown()
 
-let Brown = Color(hue: 30, saturation: 50, brightness: 65, alpha: 100)
-t.setPenColor(to: Brown)
-t.setFillColor(to:Brown)
-t.penUp()
-t.setPosition(to: Point(x: 350, y: 0))
-t.penDown()
-// Tree Rectangle
-t.beginFill()
-t.penDown()
-t.forward(steps: 30)
-t.left(by: 90)
-t.forward(steps: 200)
-t.left(by: 90)
-t.forward(steps: 30)
-t.left(by: 90)
-t.forward(steps: 200)
-t.left(by: 90)
-t.endFill()
+drawArrow()
 
-//leafs
-t.beginFill()
-let Green2 = Color(hue: 120, saturation: 50, brightness: 65, alpha: 100)
-t.setPenColor(to: Green2)
-t.setFillColor(to: Green2)
-t.penUp()
-t.setPosition(to: Point(x: 360, y: 70))
-t.forward(steps: 5)
+//Get turtle in position
 t.left(by: 90)
-t.forward(steps: 125)
+t.penUp()
+t.forward(steps: 205)
 t.right(by: 90)
-t.penDown()
-// Flower rotational symmetry
-for _ in 1...12 {
-    drawPolygon(withSides: 30, withLength: 5)
-    t.left(by: 30)
-}
-t.endFill()
+
+//Draw another arrow
+drawArrow()
 
 
 
+//Get turtle in position
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 205)
+t.right(by: 90)
 
+//Draw another arrow
+drawArrow()
+
+t.drawSelf()

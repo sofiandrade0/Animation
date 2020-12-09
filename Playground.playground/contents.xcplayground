@@ -5,5 +5,7 @@
         <page name='Tortoise Examples'/>
         <page name='Blank canvas to copy'/>
         <page name='Abstraction'/>
+        <page name='Fills'/>
+        <page name='Arrow Tessellation'/>
     </pages>
 </playground>
