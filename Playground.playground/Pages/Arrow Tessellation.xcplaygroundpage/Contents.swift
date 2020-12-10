@@ -17,7 +17,7 @@
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
 let preferredWidth = 400
-let preferredHeight = 600
+let preferredHeight = 615
 /*:
  ## Required code
  
@@ -65,7 +65,34 @@ func drawPolygon(withSides n: Int, withLength l: Int) {
 
 func drawArrow() {
     print("about to draw a arrow")
-    t.setFillColor(to: .red)
+    t.setFillColor(to: .init(hue: 240, saturation: 30, brightness:70 , alpha: 100))
+    t.beginFill()
+    // Triangle Rectangle
+    t.penDown()
+    t.forward(steps: 60)
+    t.left(by: 90)
+    t.forward(steps: 100)
+    t.left(by: -90)
+    t.forward(steps: 30)
+    t.left(by: 90)
+    t.right(by: -30)
+    t.forward(steps: 120)
+    
+    
+    t.left(by: 90)
+    t.right(by: -30)
+    t.forward(steps: 120)
+    t.left(by: 120)
+    t.forward(steps: 30)
+    t.right(by: 90)
+    t.forward(steps: 100)
+    t.left(by: 90)
+    t.endFill()
+}
+
+func drawArrow1() {
+    print("about to draw a arrow")
+    t.setFillColor(to: .init(hue: 300, saturation: 30, brightness:70 , alpha: 100))
     t.beginFill()
     // Triangle Rectangle
     t.penDown()
@@ -96,7 +123,6 @@ canvas.highPerformance = false
 t.penUp()
 t.forward(steps: 30)
 t.penDown()
-
 drawArrow()
 
 //Get turtle in position
@@ -109,6 +135,50 @@ t.right(by: 90)
 drawArrow()
 
 
+//Get turtle in position
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 205)
+t.right(by: 90)
+
+//Draw another arrow
+drawArrow()
+
+
+// another row 1
+t.right(by: 90)
+t.penUp()
+t.forward(steps: 410)
+t.left(by: 90)
+t.forward(steps: 120)
+drawArrow1()
+
+//Get turtle in position
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 205)
+t.right(by: 90)
+
+//Draw another arrow
+drawArrow1()
+
+//Get turtle in position
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 205)
+t.right(by: 90)
+
+//Draw another arrow
+drawArrow1()
+
+
+// another row 2
+t.right(by: 90)
+t.penUp()
+t.forward(steps: 410)
+t.left(by: 90)
+t.forward(steps: 120)
+drawArrow()
 
 //Get turtle in position
 t.left(by: 90)
@@ -119,4 +189,58 @@ t.right(by: 90)
 //Draw another arrow
 drawArrow()
 
-t.drawSelf()
+//Get turtle in position
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 205)
+t.right(by: 90)
+
+//Draw another arrow
+drawArrow()
+
+//Get turtle in position
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 205)
+t.right(by: 90)
+t.penUp()
+
+
+// another row 3
+t.right(by: 90)
+t.penUp()
+t.forward(steps: 410)
+t.left(by: 90)
+t.forward(steps: 120)
+drawArrow1()
+
+
+//Get turtle in position
+t.left(by: 90)
+t.penUp()
+t.forward(steps: 205)
+t.right(by: 90)
+drawArrow1()
+t.penUp()
+t.forward(steps: 120)
+drawArrow1()
+
+//Draw another arrow
+t.penUp()
+t.right(by: 90)
+t.forward(steps: 410)
+t.left(by: 90)
+t.penDown()
+drawArrow1()
+
+//Draw another arrow
+t.penUp()
+t.right(by: 180)
+t.forward(steps: 120)
+t.penDown()
+drawArrow1()
+
+
+
+
+
