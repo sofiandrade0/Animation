@@ -93,125 +93,69 @@ func drawArrow(withHue: Int) {
 // Turn on high performance mo
 canvas.highPerformance = false
 
+// Get into position to draw row 1
 t.penUp()
 t.forward(steps: 30)
 t.penDown()
-drawArrow(withHue: 240)
 
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
-t.right(by: 90)
+func drawRowOfArrows(withHue hue: Int) {
+    // Start drawing a row
+    drawArrow(withHue: hue)
 
-//Draw another arrow
-drawArrow(withHue: 240)
+    //Get turtle in position
+    t.left(by: 90)
+    t.penUp()
+    t.forward(steps: 205)
+    t.right(by: 90)
 
-
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
-t.right(by: 90)
-
-//Draw another arrow
-drawArrow(withHue: 240)
+    //Draw another arrow
+    drawArrow(withHue: hue)
 
 
-// another row 1
-t.right(by: 90)
-t.penUp()
-t.forward(steps: 410)
-t.left(by: 90)
-t.forward(steps: 120)
-drawArrow(withHue: 300)
+    //Get turtle in position
+    t.left(by: 90)
+    t.penUp()
+    t.forward(steps: 205)
+    t.right(by: 90)
 
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
-t.right(by: 90)
+    //Draw another arrow
+    drawArrow(withHue: hue)
+}
 
-//Draw another arrow
-drawArrow(withHue: 300)
-
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
-t.right(by: 90)
-
-//Draw another arrow
-drawArrow(withHue: 300)
+// Draw row 1
+drawRowOfArrows(withHue: 240)
 
 
-// another row 2
+// Get into position to draw row 2
 t.right(by: 90)
 t.penUp()
 t.forward(steps: 410)
 t.left(by: 90)
 t.forward(steps: 120)
-drawArrow(withHue: 240)
 
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
-t.right(by: 90)
-
-//Draw another arrow
-drawArrow(withHue: 240)
-
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
-t.right(by: 90)
-
-//Draw another arrow
-drawArrow(withHue: 240)
-
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
-t.right(by: 90)
-t.penUp()
+// Draw row 2
+drawRowOfArrows(withHue: 300)
 
 
-// another row 3
+// get into position to draw row 3
 t.right(by: 90)
 t.penUp()
 t.forward(steps: 410)
 t.left(by: 90)
 t.forward(steps: 120)
-drawArrow(withHue: 300)
 
+// Start drawing row 3
+drawRowOfArrows(withHue: 240)
 
-//Get turtle in position
-t.left(by: 90)
-t.penUp()
-t.forward(steps: 205)
+// get into position for row 4
 t.right(by: 90)
-drawArrow(withHue: 300)
 t.penUp()
-t.forward(steps: 120)
-drawArrow(withHue: 300)
-
-//Draw another arrow
-t.penUp()
-t.right(by: 90)
 t.forward(steps: 410)
 t.left(by: 90)
-t.penDown()
-drawArrow(withHue: 300)
-
-//Draw another arrow
-t.penUp()
-t.right(by: 180)
 t.forward(steps: 120)
-t.penDown()
-drawArrow(withHue: 300)
+
+// Draw row 4
+drawRowOfArrows(withHue: 300)
 
 
 
