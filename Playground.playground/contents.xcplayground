@@ -7,5 +7,6 @@
         <page name='Abstraction'/>
         <page name='Fills'/>
         <page name='Arrow Tessellation'/>
+        <page name='Tessellation'/>
     </pages>
 </playground>

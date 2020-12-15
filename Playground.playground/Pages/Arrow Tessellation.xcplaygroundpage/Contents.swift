@@ -16,7 +16,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 19 and 20.
  */
-let preferredWidth = 400
+let preferredWidth = 615
 let preferredHeight = 615
 /*:
  ## Required code
@@ -53,9 +53,9 @@ func drawPolygon(withSides n: Int, withLength l: Int) {
     // Loop "n" times
     for _ in 1...n {
         
-        
         t.forward(steps: l)
         t.left(by: exteriorAngle)
+      
     }
     
 }
