@@ -1,6 +1,6 @@
 //: [Previous](@previous)
 let preferredWidth = 650
-let preferredHeight = 615
+let preferredHeight = 815
 /*:
  ## Required code
  
@@ -47,7 +47,7 @@ func drawPolygon(withSides n: Int, withLength l: Int) {
 //Set position
 t.penUp()
 t.forward(steps: 300)
-t.setPosition(to: Point(x: 400, y: 400))
+t.setPosition(to: Point(x: 50, y: 700))
 
 
 func drawPointer() {
@@ -67,70 +67,49 @@ func drawPointer() {
     t.forward(steps: 80)
 }
 
-func drawLeftRow() {
+func drawRow() {
     print("about to draw a  row")
-    t.forward(steps: 120)
-    t.left(by: 180)
-    
-    drawPointer()
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-}
-
-
-func drawRightRow() {
-    print("about to draw a  row")
-    t.forward(steps: -300)
    
     // Refactored to use a loop
     // Example of abstraction
     for _ in 1...7 {
-        drawPointer()
         t.penUp()
         t.forward(steps: 80)
+        drawPointer()
     }
 }
 
-drawRightRow()
-//t.forward(steps: -280)
-//drawLeftRow()
-//
-//drawRightRow()
-//t.forward(steps: -280)
-//drawLeftRow()
+// Travel down the point of the an arrow
+func travelDownArrow() {
+    t.penUp()
+    t.left(by: 60)
+    t.forward(steps: 100)
+    t.left(by: 60)
+    t.forward(steps: 100)
+}
+
+// DRAWING BEGINS!
+
+for _ in 1...2 {
+    // Draw a row to the right side of canvas
+    drawRow()
+
+    // Get turtle in position to draw row to the left side
+    t.right(by: 180)
+
+    // Draw a row to the left side of canvas
+    drawRow()
+
+    // Get turtle in position to draw towards right side of canvas
+    travelDownArrow()
+    t.right(by: 120)
+    travelDownArrow()
+    t.left(by: 60)
+
+    
+}
 
 
-
-// Get in position to draw another pointer
 
 
 
