@@ -67,7 +67,7 @@ func drawPointer() {
     t.forward(steps: 80)
 }
 
-func drawRow() {
+func drawLeftRow() {
     print("about to draw a  row")
     t.forward(steps: 120)
     t.left(by: 180)
@@ -107,7 +107,7 @@ func drawRow() {
 }
 
 
-func drawRow1() {
+func drawRightRow() {
     print("about to draw a  row")
     t.forward(steps: -300)
     
@@ -150,13 +150,13 @@ func drawRow1() {
     
 }
 
-drawRow1()
+drawRightRow()
 t.forward(steps: -280)
-drawRow()
+drawLeftRow()
 
-drawRow1()
+drawRightRow()
 t.forward(steps: -280)
-drawRow()
+drawLeftRow()
 
 
 
