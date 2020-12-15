@@ -1,5 +1,5 @@
 //: [Previous](@previous)
-let preferredWidth = 615
+let preferredWidth = 650
 let preferredHeight = 615
 /*:
  ## Required code
@@ -110,53 +110,23 @@ func drawLeftRow() {
 func drawRightRow() {
     print("about to draw a  row")
     t.forward(steps: -300)
-    
-    drawPointer()
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
-    t.penUp()
-    t.forward(steps: 80)
-    drawPointer()
-    
+   
+    // Refactored to use a loop
+    // Example of abstraction
+    for _ in 1...7 {
+        drawPointer()
+        t.penUp()
+        t.forward(steps: 80)
+    }
 }
 
 drawRightRow()
-t.forward(steps: -280)
-drawLeftRow()
-
-drawRightRow()
-t.forward(steps: -280)
-drawLeftRow()
+//t.forward(steps: -280)
+//drawLeftRow()
+//
+//drawRightRow()
+//t.forward(steps: -280)
+//drawLeftRow()
 
 
 
