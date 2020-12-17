@@ -8,5 +8,7 @@
         <page name='Fills'/>
         <page name='Arrow Tessellation'/>
         <page name='Tessellation'/>
+        <page name='Tessellation 2'/>
+        <page name='Tessellation 2b'/>
     </pages>
 </playground>

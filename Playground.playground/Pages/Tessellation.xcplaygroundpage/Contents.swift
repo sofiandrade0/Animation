@@ -72,7 +72,7 @@ func drawRow() {
    
     // Refactored to use a loop
     // Example of abstraction
-    for _ in 1...7 {
+    for _ in 1...9 {
         t.penUp()
         t.forward(steps: 80)
         drawPointer()
@@ -105,8 +105,6 @@ for _ in 1...2 {
     t.right(by: 120)
     travelDownArrow()
     t.left(by: 60)
-
-    
 }
 
 
